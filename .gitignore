@@ -1,0 +1,4 @@
+# list of ignored files 
+.DS_Store
+# all files in xcuserdata folder
+xcuserdata/
