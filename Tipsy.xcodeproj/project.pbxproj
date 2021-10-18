@@ -48,6 +48,7 @@
 		76E0F0A4271D216200973A6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
 				ADB689582326708D006D4E2B /* Main.storyboard */,
 			);
 			path = View;
@@ -77,7 +78,6 @@
 				76E0F0A3271D214F00973A6E /* Controller */,
 				76E0F0A4271D216200973A6E /* View */,
 				ADB6895B2326708E006D4E2B /* Assets.xcassets */,
-				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
 				ADB689602326708E006D4E2B /* Info.plist */,
 			);
 			path = Tipsy;
