@@ -16,6 +16,11 @@ class BillViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
 //    actions:
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
 //        handle stepper value changing
@@ -29,11 +34,6 @@ class BillViewController: UIViewController {
 //        handle calculation
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+    
 }
 

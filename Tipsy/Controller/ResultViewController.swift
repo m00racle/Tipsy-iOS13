@@ -13,15 +13,15 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
-    @IBAction func recalculatePressed(_ sender: UIButton) {
-//        handle the recalculate button pressed
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func recalculatePressed(_ sender: UIButton) {
+//        handle the recalculate button pressed
+    }
+    
+    
 }
