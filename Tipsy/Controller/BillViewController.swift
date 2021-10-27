@@ -9,12 +9,31 @@
 import UIKit
 
 class BillViewController: UIViewController {
-
+//    outlets:
+    @IBOutlet weak var billTextField: UITextField!
+    @IBOutlet weak var zeroPctButton: UIButton!
+    @IBOutlet weak var tenPctButton: UIButton!
+    @IBOutlet weak var twentyPctButton: UIButton!
+    @IBOutlet weak var splitNumberLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+//    actions:
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+//        handle stepper value changing
+    }
+    
+    @IBAction func tipChanged(_ sender: UIButton) {
+//        handle each button changed and handles other tip buttons.
+    }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
+//        handle calculation
+    }
+    
+    
 }
 
