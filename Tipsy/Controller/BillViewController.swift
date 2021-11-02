@@ -28,6 +28,12 @@ class BillViewController: UIViewController {
     
     @IBAction func tipChanged(_ sender: UIButton) {
 //        handle each button changed and handles other tip buttons.
+//        set all buttons to deselect first and then put the sender to isSelected = true
+        zeroPctButton.isSelected = false
+        tenPctButton.isSelected = false
+        twentyPctButton.isSelected = false
+//        set the sender as isSelected
+        sender.isSelected = true
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
