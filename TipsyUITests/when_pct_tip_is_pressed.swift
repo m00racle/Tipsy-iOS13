@@ -34,6 +34,7 @@ class when_pct_tip_is_pressed: XCTestCase {
         zeroPct.tap()
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(true, zeroPct.isSelected)
         XCTAssertEqual(false, tenPct.isSelected)
         XCTAssertEqual(false, twentyPct.isSelected)
     }
