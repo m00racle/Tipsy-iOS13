@@ -34,6 +34,8 @@ class BillViewController: UIViewController {
         twentyPctButton.isSelected = false
 //        set the sender as isSelected
         sender.isSelected = true
+        let varpct = sender.currentTitle!
+        print((varpct as NSString).floatValue/100)
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
