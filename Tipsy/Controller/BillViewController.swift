@@ -36,7 +36,6 @@ class BillViewController: UIViewController {
 //        set the sender as isSelected
         sender.isSelected = true
         tipFactor = (sender.currentTitle! as NSString).floatValue/100
-        print(tipFactor)
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
