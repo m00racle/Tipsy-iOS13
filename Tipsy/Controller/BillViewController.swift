@@ -15,6 +15,7 @@ class BillViewController: UIViewController {
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
+    var tipFactor:Float = 0.1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,8 @@ class BillViewController: UIViewController {
         twentyPctButton.isSelected = false
 //        set the sender as isSelected
         sender.isSelected = true
-        let varpct = sender.currentTitle!
-        print((varpct as NSString).floatValue/100)
+        tipFactor = (sender.currentTitle! as NSString).floatValue/100
+        print(tipFactor)
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
