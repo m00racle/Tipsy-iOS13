@@ -15,6 +15,7 @@ class BillViewController: UIViewController {
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
+    var tipFactor:Float = 0.1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,13 @@ class BillViewController: UIViewController {
     
     @IBAction func tipChanged(_ sender: UIButton) {
 //        handle each button changed and handles other tip buttons.
+//        set all buttons to deselect first and then put the sender to isSelected = true
+        zeroPctButton.isSelected = false
+        tenPctButton.isSelected = false
+        twentyPctButton.isSelected = false
+//        set the sender as isSelected
+        sender.isSelected = true
+        tipFactor = (sender.currentTitle! as NSString).floatValue/100
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
