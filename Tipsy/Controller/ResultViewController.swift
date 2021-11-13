@@ -21,6 +21,8 @@ class ResultViewController: UIViewController {
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
 //        handle the recalculate button pressed
+//        back to the previous view
+        self.dismiss(animated: true, completion: nil)
     }
     
     
