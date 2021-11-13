@@ -51,8 +51,8 @@ class StepperUITest: XCTestCase {
         XCTAssertTrue(app.staticTexts["25"].exists)
         
 //        test click 12 times will result label 12
-        for _ in 2...12 {
-            incrementButton.tap()
+        for _ in 1...12 {
+            decrementButton.tap()
         }
         decrementButton.tap()
         XCTAssertTrue(incrementButton.isEnabled)

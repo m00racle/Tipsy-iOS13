@@ -28,10 +28,9 @@ class StepperCalculationTest: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 //        action call to the stepper changes function up to 12. then the numberOfPeople = 12.0
-        let stepperButtons:UIStepper = billView.stepperButtons
-        for _ in 3...12 {
-            billView.stepperValueChanged(stepperButtons)
-        }
+        let stepperButtons : UIStepper = billView.stepperButtons
+        stepperButtons.value = 12.0
+        billView.stepperValueChanged(stepperButtons)
 //        assert
         XCTAssertEqual(billView.numberOfPeople, 12.0)
     }
