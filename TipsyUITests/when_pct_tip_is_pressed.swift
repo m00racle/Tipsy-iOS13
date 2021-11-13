@@ -9,9 +9,20 @@
 import XCTest
 
 class when_pct_tip_is_pressed: XCTestCase {
+    var app: XCUIApplication!
+    var zeroPct : XCUIElement!
+    var tenPct : XCUIElement!
+    var twentyPct : XCUIElement!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        // UI tests must launch the application that they test.
+        app = XCUIApplication()
+        app.launch()
+//        access the buttons
+        zeroPct = app.buttons["zeroPctButton"]
+        tenPct = app.buttons["tenPctButton"]
+        twentyPct = app.buttons["twentyPctButton"]
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -22,13 +33,6 @@ class when_pct_tip_is_pressed: XCTestCase {
     
 
     func test_should_deselect_other_pct_buttons() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-//        access the buttons
-        let zeroPct = app.buttons["zeroPctButton"]
-        let tenPct = app.buttons["tenPctButton"]
-        let twentyPct = app.buttons["twentyPctButton"]
 
 //        when click the other pct tip buttons should isSelected = false
         zeroPct.tap()
@@ -41,12 +45,12 @@ class when_pct_tip_is_pressed: XCTestCase {
     
     func test_should_deselect_other_pct_buttons_except_twenty() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-//        access the buttons
-        let zeroPct = app.buttons["zeroPctButton"]
-        let tenPct = app.buttons["tenPctButton"]
-        let twentyPct = app.buttons["twentyPctButton"]
+//        let app = XCUIApplication()
+//        app.launch()
+////        access the buttons
+//        let zeroPct = app.buttons["zeroPctButton"]
+//        let tenPct = app.buttons["tenPctButton"]
+//        let twentyPct = app.buttons["twentyPctButton"]
 
 //        when click the other pct tip buttons should isSelected = false
         twentyPct.tap()

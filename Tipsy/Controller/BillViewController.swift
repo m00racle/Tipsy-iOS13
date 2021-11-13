@@ -40,6 +40,7 @@ class BillViewController: UIViewController {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
 //        handle calculation
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     

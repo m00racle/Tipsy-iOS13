@@ -30,6 +30,12 @@ class TipsyUITestsLaunchTests: XCTestCase {
         attachment.name = "Launch Screen"
         attachment.lifetime = .keepAlways
         add(attachment)
-        XCTAssertEqual(true, app.buttons["tenPctButton"].isSelected)
+        
+        let startNumDiv = XCUIApplication().staticTexts["2"]
+        
+//        asserts
+//        XCTAssertEqual(true, app.buttons["tenPctButton"].isSelected)
+        XCTAssertTrue(app.buttons["tenPctButton"].isSelected)
+        XCTAssertTrue(startNumDiv.exists)
     }
 }
