@@ -15,7 +15,9 @@ class BillViewController: UIViewController {
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
+    @IBOutlet weak var stepperButtons: UIStepper!
     var tipFactor:Float = 0.1
+    var numberOfPeople : Float = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="billTextField" destination="wcN-ka-Q4F" id="hSw-el-Ao6"/>
                         <outlet property="splitNumberLabel" destination="bSy-Yc-886" id="wfj-yv-Srj"/>
+                        <outlet property="stepperButtons" destination="haq-5m-pqs" id="OAF-bp-Waq"/>
                         <outlet property="tenPctButton" destination="7y6-Kf-yF0" id="8Ce-js-quc"/>
                         <outlet property="twentyPctButton" destination="UtR-dU-EKt" id="NIS-oB-lll"/>
                         <outlet property="zeroPctButton" destination="XzR-0E-Xf7" id="u37-Ba-3bN"/>
