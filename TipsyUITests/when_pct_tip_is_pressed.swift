@@ -41,18 +41,7 @@ class when_pct_tip_is_pressed: XCTestCase {
         XCTAssertEqual(true, zeroPct.isSelected)
         XCTAssertEqual(false, tenPct.isSelected)
         XCTAssertEqual(false, twentyPct.isSelected)
-    }
-    
-    func test_should_deselect_other_pct_buttons_except_twenty() throws {
-        // UI tests must launch the application that they test.
-//        let app = XCUIApplication()
-//        app.launch()
-////        access the buttons
-//        let zeroPct = app.buttons["zeroPctButton"]
-//        let tenPct = app.buttons["tenPctButton"]
-//        let twentyPct = app.buttons["twentyPctButton"]
-
-//        when click the other pct tip buttons should isSelected = false
+        //        when click the other pct tip buttons should isSelected = false
         twentyPct.tap()
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -60,6 +49,8 @@ class when_pct_tip_is_pressed: XCTestCase {
         XCTAssertEqual(false, tenPct.isSelected)
         XCTAssertEqual(true, twentyPct.isSelected)
     }
+    
+    
 
     
 }

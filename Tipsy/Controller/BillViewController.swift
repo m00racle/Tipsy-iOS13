@@ -16,17 +16,26 @@ class BillViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     @IBOutlet weak var stepperButtons: UIStepper!
-    var tipFactor:Float = 0.1
-    var numberOfPeople : Float = 2
+    var tipFactor:Float!
+    var numberOfPeople : Float!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        set initial value
+        tipFactor = zeroPctButton.isSelected ? 0.0 : tenPctButton.isSelected ? 0.1 : 0.2
+        numberOfPeople = (splitNumberLabel.text! as NSString).floatValue
     }
 
 //    actions:
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
 //        handle stepper value changing
+//        change the splitNubmerLabel
+        splitNumberLabel.text = String(format:"%.0f", sender.value)
+//        numberOfPeople = Float(sender.value)
+//        NOTE: the number used in the calculation will be the one displayed on the split number label.
+//        this is to varify that the user already see the number he/she inputted. Thus the code becomes:
+        numberOfPeople = (splitNumberLabel.text! as NSString).floatValue
     }
     
     @IBAction func tipChanged(_ sender: UIButton) {
