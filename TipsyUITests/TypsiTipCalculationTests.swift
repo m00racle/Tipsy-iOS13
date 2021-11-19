@@ -46,8 +46,11 @@ class TypsiTipCalculationTests: XCTestCase {
 //        press the calculate button
         app/*@START_MENU_TOKEN@*/.staticTexts["Calculate"]/*[[".buttons[\"Calculate\"].staticTexts[\"Calculate\"]",".staticTexts[\"Calculate\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 //        assert
-        let resultText : String = app.staticTexts["56.32"].label
-        XCTAssertEqual(resultText, "30.12")
+//        let resultText : String = app.staticTexts["56.32"].label
+//        XCTAssertEqual(resultText, "30.12")
+        XCTAssertTrue(app.staticTexts["30.12"].exists)
+//        app.staticTexts["Split between 2 people, with 10% tip."].tap()
+        XCTAssertTrue(app.staticTexts["Split between 5 people, with 20% tip."].exists)
         
     }
 
