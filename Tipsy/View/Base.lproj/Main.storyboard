@@ -130,8 +130,8 @@
                                             <constraint firstAttribute="trailing" secondItem="QDm-4I-R22" secondAttribute="trailing" constant="30" id="tPk-Tm-mVc"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSl-VY-LBj">
-                                        <rect key="frame" x="107" y="322" width="200" height="54"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSl-VY-LBj">
+                                        <rect key="frame" x="107" y="604" width="200" height="54"/>
                                         <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="0Kv-JJ-dIu"/>
@@ -152,9 +152,9 @@
                                 <color key="backgroundColor" red="0.84362953900000004" green="0.97556561230000005" blue="0.92320168020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="NtY-F4-RSD" firstAttribute="leading" secondItem="EOv-ot-7Fq" secondAttribute="leading" constant="20" id="3Na-jg-YoM"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSl-VY-LBj" secondAttribute="bottom" constant="40" id="79w-gy-uH2"/>
                                     <constraint firstAttribute="trailing" secondItem="NtY-F4-RSD" secondAttribute="trailing" constant="20" id="KbR-NJ-DEv"/>
                                     <constraint firstItem="FSl-VY-LBj" firstAttribute="centerX" secondItem="EOv-ot-7Fq" secondAttribute="centerX" id="VnG-72-PFq"/>
-                                    <constraint firstItem="FSl-VY-LBj" firstAttribute="top" secondItem="NtY-F4-RSD" secondAttribute="bottom" constant="40" id="kPj-T5-kNA"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="C9X-5R-fQ6">
@@ -169,7 +169,7 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 123.56" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcN-ka-Q4F">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 123.56" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wcN-ka-Q4F">
                                         <rect key="frame" x="0.0" y="56" width="414" height="48"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -177,7 +177,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
