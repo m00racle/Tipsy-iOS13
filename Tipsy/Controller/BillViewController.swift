@@ -31,7 +31,7 @@ class BillViewController: UIViewController {
 //    actions:
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
 //        retract keyboard if billTextField is selected prior
-        billTextField.resignFirstResponder()
+        billTextField.endEditing(true)
 //        handle stepper value changing
 //        change the splitNubmerLabel
         splitNumberLabel.text = String(format:"%.0f", sender.value)
@@ -43,7 +43,7 @@ class BillViewController: UIViewController {
     
     @IBAction func tipChanged(_ sender: UIButton) {
 //        retract keyboard if the billTextField is selected prior
-        billTextField.resignFirstResponder()
+        billTextField.endEditing(true)
 //        handle each button changed and handles other tip buttons.
 //        set all buttons to deselect first and then put the sender to isSelected = true
         zeroPctButton.isSelected = false
@@ -55,7 +55,7 @@ class BillViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        billTextField.resignFirstResponder()
+        billTextField.endEditing(true)
 //        handle calculation
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
