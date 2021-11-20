@@ -52,7 +52,7 @@ class BillViewController: UIViewController {
         twentyPctButton.isSelected = false
 //        set the sender as isSelected
         sender.isSelected = true
-        tipFactor = (Double(sender.currentTitle ?? "") ?? 0.0)/100
+        tipFactor = zeroPctButton.isSelected ? 0.0 : tenPctButton.isSelected ? 0.1 : 0.2
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {

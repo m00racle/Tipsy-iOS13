@@ -22,7 +22,7 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         totalLabel.text = payPerPerson
-        settingsLabel.text = "Split between \(numberOfPeople ?? 0.0) people, with \(tipFactor*100)% tip"
+        settingsLabel.text = "Split between \(Int(numberOfPeople ?? 0.0)) people, with \(Int(tipFactor*100))% tip."
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
