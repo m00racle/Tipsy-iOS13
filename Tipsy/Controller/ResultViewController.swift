@@ -13,10 +13,16 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
+    var tipFactor : Double!
+    var numberOfPeople : Double!
+    var payPerPerson : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        totalLabel.text = payPerPerson
+        settingsLabel.text = "Split between \(Int(numberOfPeople ?? 0.0)) people, with \(Int(tipFactor*100))% tip."
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {

@@ -46,8 +46,32 @@ class TypsiTipCalculationTests: XCTestCase {
 //        press the calculate button
         app/*@START_MENU_TOKEN@*/.staticTexts["Calculate"]/*[[".buttons[\"Calculate\"].staticTexts[\"Calculate\"]",".staticTexts[\"Calculate\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 //        assert
-        let resultText : String = app.staticTexts["56.32"].label
-        XCTAssertEqual(resultText, "30.12")
+//        let resultText : String = app.staticTexts["56.32"].label
+//        XCTAssertEqual(resultText, "30.12")
+        XCTAssertTrue(app.staticTexts["30.12"].exists)
+//        app.staticTexts["Split between 2 people, with 10% tip."].tap()
+        XCTAssertTrue(app.staticTexts["Split between 5 people, with 20% tip."].exists)
+        
+    }
+    
+    func testEmptyBill_ShowWarningResult() {
+//        if the bill text field is empty when user tap calculate the result view should put warning.
+        let app = XCUIApplication()
+//        set the tip to 20%
+        app/*@START_MENU_TOKEN@*/.staticTexts["20%"]/*[[".buttons[\"20%\"].staticTexts[\"20%\"]",".buttons[\"twentyPctButton\"].staticTexts[\"20%\"]",".staticTexts[\"20%\"]"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        set the number of people to 5 people
+        let incrementButton = app.steppers.buttons["Increment"]
+        incrementButton.tap()
+        incrementButton.tap()
+        incrementButton.tap()
+//        press the calculate button
+        app/*@START_MENU_TOKEN@*/.staticTexts["Calculate"]/*[[".buttons[\"Calculate\"].staticTexts[\"Calculate\"]",".staticTexts[\"Calculate\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        assert
+//        let resultText : String = app.staticTexts["56.32"].label
+//        XCTAssertEqual(resultText, "30.12")
+        XCTAssertTrue(app.staticTexts["Empty Bill"].exists)
+//        app.staticTexts["Split between 2 people, with 10% tip."].tap()
+        XCTAssertTrue(app.staticTexts["Split between 5 people, with 20% tip."].exists)
         
     }
 
