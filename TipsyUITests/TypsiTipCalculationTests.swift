@@ -69,7 +69,7 @@ class TypsiTipCalculationTests: XCTestCase {
 //        assert
 //        let resultText : String = app.staticTexts["56.32"].label
 //        XCTAssertEqual(resultText, "30.12")
-        XCTAssertTrue(app.staticTexts["Looks like you have not input any bill amount"].exists)
+        XCTAssertTrue(app.staticTexts["Empty Bill"].exists)
 //        app.staticTexts["Split between 2 people, with 10% tip."].tap()
         XCTAssertTrue(app.staticTexts["Split between 5 people, with 20% tip."].exists)
         

@@ -16,8 +16,9 @@ class BillViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     @IBOutlet weak var stepperButtons: UIStepper!
-    var tipFactor:Float!
-    var numberOfPeople : Float!
+    var tipFactor:Double!
+    var numberOfPeople : Double!
+    var payPerPerson : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class BillViewController: UIViewController {
 //        set initial value
         billTextField.resignFirstResponder()
         tipFactor = zeroPctButton.isSelected ? 0.0 : tenPctButton.isSelected ? 0.1 : 0.2
-        numberOfPeople = (splitNumberLabel.text! as NSString).floatValue
+        numberOfPeople = Double(splitNumberLabel.text ?? "")
     }
 
 //    actions:
@@ -38,7 +39,7 @@ class BillViewController: UIViewController {
 //        numberOfPeople = Float(sender.value)
 //        NOTE: the number used in the calculation will be the one displayed on the split number label.
 //        this is to varify that the user already see the number he/she inputted. Thus the code becomes:
-        numberOfPeople = (splitNumberLabel.text! as NSString).floatValue
+        numberOfPeople = Double(splitNumberLabel.text ?? "")
     }
     
     @IBAction func tipChanged(_ sender: UIButton) {
@@ -51,15 +52,33 @@ class BillViewController: UIViewController {
         twentyPctButton.isSelected = false
 //        set the sender as isSelected
         sender.isSelected = true
-        tipFactor = (sender.currentTitle! as NSString).floatValue/100
+        tipFactor = (Double(sender.currentTitle ?? "") ?? 0.0)/100
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         billTextField.endEditing(true)
 //        handle calculation
+        let billAmount = Double(billTextField.text ?? "")
+        if billAmount == nil {
+            payPerPerson = "Empty Bill"
+        } else {
+            let result = (billAmount! * (1 + tipFactor))/numberOfPeople
+            payPerPerson = String(format:"%.2f", result)
+        }
+        
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        prepare things to bring to the result viewer
+        if segue.identifier == "resultSegue" {
+//            put the calculation results
+            let destinationView = segue.destination as! ResultViewController
+            destinationView.tipFactor = tipFactor
+            destinationView.numberOfPeople = numberOfPeople
+            destinationView.payPerPerson = payPerPerson
+        }
+    }
     
 }
 
