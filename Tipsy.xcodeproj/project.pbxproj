@@ -14,6 +14,7 @@
 		76700A5F273F520500A24085 /* StepperCalculationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76700A5E273F520500A24085 /* StepperCalculationTest.swift */; };
 		76700A61273F57F300A24085 /* StepperUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76700A60273F57F300A24085 /* StepperUITest.swift */; };
 		7683202727224CCE00EA30CC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683202627224CCE00EA30CC /* ResultViewController.swift */; };
+		76C92A252749CD2400F3250A /* TypsiEnterBillDoneAndClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C92A242749CD2400F3250A /* TypsiEnterBillDoneAndClear.swift */; };
 		76CD55D8273CE6C00010BDE6 /* TipsyTipPercentUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD55D7273CE6C00010BDE6 /* TipsyTipPercentUnitTests.swift */; };
 		ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689522326708D006D4E2B /* AppDelegate.swift */; };
 		ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689542326708D006D4E2B /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		76700A5E273F520500A24085 /* StepperCalculationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperCalculationTest.swift; sourceTree = "<group>"; };
 		76700A60273F57F300A24085 /* StepperUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperUITest.swift; sourceTree = "<group>"; };
 		7683202627224CCE00EA30CC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		76C92A242749CD2400F3250A /* TypsiEnterBillDoneAndClear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypsiEnterBillDoneAndClear.swift; sourceTree = "<group>"; };
 		76CD55D5273CE6C00010BDE6 /* TipsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CD55D7273CE6C00010BDE6 /* TipsyTipPercentUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTipPercentUnitTests.swift; sourceTree = "<group>"; };
 		ADB6894F2326708D006D4E2B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 		761BC6D32730CC72005B87F5 /* TipsyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				76C92A242749CD2400F3250A /* TypsiEnterBillDoneAndClear.swift */,
 				76412BD42743418E00FB1835 /* TypsiTipCalculationTests.swift */,
 				76700A60273F57F300A24085 /* StepperUITest.swift */,
 				76700A5C273F489D00A24085 /* TipsySegueUITest.swift */,
@@ -291,6 +294,7 @@
 			files = (
 				76700A5D273F489D00A24085 /* TipsySegueUITest.swift in Sources */,
 				761BC6D72730CC72005B87F5 /* TipsyUITestsLaunchTests.swift in Sources */,
+				76C92A252749CD2400F3250A /* TypsiEnterBillDoneAndClear.swift in Sources */,
 				76412BD52743418F00FB1835 /* TypsiTipCalculationTests.swift in Sources */,
 				761BC6D52730CC72005B87F5 /* when_pct_tip_is_pressed.swift in Sources */,
 				76700A61273F57F300A24085 /* StepperUITest.swift in Sources */,

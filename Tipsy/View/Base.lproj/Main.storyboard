@@ -26,11 +26,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="155" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="clear"/>
+                                                <connections>
+                                                    <action selector="textFieldButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2x8-9R-Vsm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-fR-Jai">
                                                 <rect key="frame" x="179" y="0.0" width="155" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="done"/>
+                                                <connections>
+                                                    <action selector="textFieldButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdU-ny-eO6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
