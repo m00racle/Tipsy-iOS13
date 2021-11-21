@@ -30,6 +30,17 @@ class BillViewController: UIViewController {
     }
 
 //    actions:
+    @IBAction func textFieldButtonTapped(_ sender: UIButton) {
+        if sender.currentTitle == "clear" {
+//            cler the text field
+            billTextField.text = ""
+            billTextField.becomeFirstResponder()
+        } else {
+//            end editing and hide keyboard.
+            billTextField.endEditing(true)
+        }
+    }
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
 //        retract keyboard if billTextField is selected prior
         billTextField.endEditing(true)
